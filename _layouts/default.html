@@ -12,19 +12,44 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Apply form: client-side confirmation. When a real endpoint is wired
-    // (set data-live="true" + a working action), let the POST go through.
+    // Apply form: submit to Formspree over AJAX so the visitor stays on-page
+    // and sees our own success message (Formspree returns JSON when asked).
     (function () {
       var gf = document.getElementById('grantForm');
       if (!gf) return;
+      var ok = document.getElementById('formSuccess');
+      var err = document.getElementById('formError');
+      var btn = gf.querySelector('button[type="submit"]');
+      function fail(msg) {
+        if (!err) return;
+        err.textContent = msg + ' You can also email morgan@goboldlyforward.com.';
+        err.classList.remove('d-none');
+        err.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
       gf.addEventListener('submit', function (e) {
-        if (gf.getAttribute('data-live') === 'true') return;
         e.preventDefault();
-        var ok = document.getElementById('formSuccess');
-        if (ok) {
-          ok.classList.remove('d-none');
-          ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+        if (err) err.classList.add('d-none');
+        if (!gf.checkValidity()) { gf.reportValidity(); return; }
+        var label = btn ? btn.textContent : '';
+        if (btn) { btn.disabled = true; btn.textContent = 'Submitting…'; }
+        fetch(gf.action, {
+          method: 'POST',
+          body: new FormData(gf),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            gf.reset();
+            if (ok) { ok.classList.remove('d-none'); ok.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+          } else {
+            return res.json().then(function (d) {
+              throw new Error(d && d.errors ? d.errors.map(function (x) { return x.message; }).join(' ') : 'Submission failed.');
+            });
+          }
+        }).catch(function (e2) {
+          fail(e2 && e2.message ? e2.message : 'Something went wrong.');
+        }).finally(function () {
+          if (btn) { btn.disabled = false; btn.textContent = label; }
+        });
       });
     })();
   </script>

@@ -18,9 +18,9 @@ nav_active: apply
         </div>
 
         <div class="form-card">
-          <!-- TODO: to receive submissions, set action to your Formspree (or similar) endpoint
-               and change data-live to "true" so the POST goes through. -->
-          <form class="application-form" id="grantForm" data-live="false" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST" novalidate>
+          <form class="application-form" id="grantForm" action="https://formspree.io/f/xlgkyzjv" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Go Boldly Grant application">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px;">
             <fieldset class="mb-4">
               <legend>About your organization</legend>
               <div class="row g-3">
@@ -101,6 +101,7 @@ nav_active: apply
             <div id="formSuccess" class="alert alert-success mt-4 mb-0 d-none" role="alert">
               Thanks for applying! We've received your application and will be in touch within two weeks. &#10022;
             </div>
+            <div id="formError" class="alert alert-danger mt-4 mb-0 d-none" role="alert"></div>
           </form>
         </div>
       </div>
