@@ -43,18 +43,45 @@ nav_active: home
               <span class="mock-title">impact-dashboard &middot; your nonprofit</span>
             </div>
             <div class="mock-body">
-              <div class="mock-stats">
-                <div class="mock-stat"><div class="n">3.2x</div><div class="l">Program capacity</div></div>
-                <div class="mock-stat"><div class="n">&minus;70%</div><div class="l">Admin time</div></div>
+              <div style="display:flex; gap:1.2rem; margin-bottom:0.6rem; font-family: var(--font-sans); font-size:0.72rem; color: var(--color-muted);">
+                <span style="display:flex; align-items:center; gap:0.4rem;"><span style="width:14px; height:3px; border-radius:2px; background: var(--color-accent); display:inline-block;"></span>Program capacity</span>
+                <span style="display:flex; align-items:center; gap:0.4rem;"><span style="width:14px; height:3px; border-radius:2px; background:#5B6573; display:inline-block;"></span>Admin time</span>
               </div>
-              <div class="mock-chart">
-                <span style="height:40%"></span>
-                <span style="height:55%"></span>
-                <span style="height:48%"></span>
-                <span style="height:70%"></span>
-                <span style="height:62%"></span>
-                <span class="hi" style="height:92%"></span>
-              </div>
+
+              <svg viewBox="0 0 440 200" width="100%" role="img" aria-label="Program capacity and admin time run together until the grant, after which capacity climbs and admin time declines.">
+                <!-- gridlines -->
+                <g stroke="#EEF0F3" stroke-width="1">
+                  <line x1="20" y1="60" x2="300" y2="60"/>
+                  <line x1="20" y1="100" x2="300" y2="100"/>
+                  <line x1="20" y1="140" x2="300" y2="140"/>
+                </g>
+                <line x1="20" y1="170" x2="300" y2="170" stroke="#E2E5EA" stroke-width="1.5"/>
+
+                <!-- widening impact gap the grant creates -->
+                <path d="M192,126 C222,118 250,90 275,62 C288,48 295,43 300,40 L300,151 C270,146 235,138 192,131 Z" fill="#D69E2E" opacity="0.12"/>
+
+                <!-- grant marker -->
+                <line x1="192" y1="26" x2="192" y2="170" stroke="#D69E2E" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.55"/>
+                <text x="192" y="18" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" letter-spacing="1.5" fill="#B27F1B">GRANT</text>
+
+                <!-- admin time (declines) -->
+                <path d="M20,160 C70,153 130,141 192,131 C235,138 270,146 300,151" fill="none" stroke="#5B6573" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- program capacity (climbs) -->
+                <path d="M20,156 C70,149 130,137 192,126 C222,118 250,90 275,62 C288,48 295,43 300,40" fill="none" stroke="#D69E2E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <!-- split point -->
+                <circle cx="192" cy="131" r="3" fill="#5B6573" stroke="#fff" stroke-width="1.5"/>
+                <circle cx="192" cy="126" r="3" fill="#D69E2E" stroke="#fff" stroke-width="1.5"/>
+                <!-- endpoints -->
+                <circle cx="300" cy="40" r="4" fill="#D69E2E" stroke="#fff" stroke-width="2"/>
+                <circle cx="300" cy="151" r="4" fill="#5B6573" stroke="#fff" stroke-width="2"/>
+
+                <!-- value chips -->
+                <text x="312" y="38" font-family="'Fraunces', Georgia, serif" font-size="20" font-weight="700" fill="#1B2A41">3.2&#215;</text>
+                <text x="312" y="52" font-family="'IBM Plex Mono', monospace" font-size="8" letter-spacing="0.5" fill="#B27F1B">CAPACITY</text>
+                <text x="312" y="149" font-family="'Fraunces', Georgia, serif" font-size="20" font-weight="700" fill="#5B6573">&#8722;70%</text>
+                <text x="312" y="163" font-family="'IBM Plex Mono', monospace" font-size="8" letter-spacing="0.5" fill="#8A93A3">ADMIN TIME</text>
+              </svg>
             </div>
           </div>
           <div class="grant-badge">
@@ -90,7 +117,7 @@ nav_active: home
         <span style="color: var(--color-border); font-size: 1.5rem;">&middot;</span>
       </div>
       <div class="col-auto">
-        <a class="logo-lockup" href="#" rel="noopener">
+        <a class="logo-lockup" href="https://www.nationalangels.org/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 21s-6-4.35-9-8.5C1.3 9.9 2.4 6 6 6c2 0 3.2 1.2 4 2.5C10.8 7.2 12 6 14 6"/>
             <path d="M14 6c3.6 0 4.7 3.9 3 6.5"/>
