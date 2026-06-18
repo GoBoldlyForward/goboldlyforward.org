@@ -1,209 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Go Boldly Foundation | Technology Built for Your Mission</title>
-  <meta name="description" content="Custom software, fully funded, for the nonprofits doing the work that matters most. Apply for our $50,000 grant of technology services.">
+---
+layout: default
+description: >-
+  Go Boldly Foundation helps mission-driven nonprofits maximize their impact
+  with cutting-edge software, funded through our $50,000 technology grant.
+nav_active: home
+---
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<header id="top" class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="eyebrow">Go Boldly Foundation</span>
+        <h1 class="mb-4">Maximize your impact with <span class="highlight">cutting-edge technology</span>, fully funded.</h1>
+        <p class="lead mb-0">We help mission-driven organizations harness modern software to do more of the work that matters, and we fund the entire build through our $50,000 technology grant.</p>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/styles.css" rel="stylesheet">
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg sticky-top border-bottom-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">goboldlyforward.org</a>
-      <a class="btn btn-primary btn-sm nav-apply-mobile d-lg-none" href="grant.html#apply">Apply</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-        <ul class="navbar-nav align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html#approach">Our Approach</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#work">Recent Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="grant.html">Grant Program</a></li>
-          <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="grant.html#apply">Apply for Grant</a></li>
+        <div class="d-flex flex-wrap gap-3 mt-4 pt-2">
+          <a href="{{ '/apply/' | relative_url }}" class="btn btn-gold btn-lg">Apply for the Grant</a>
+          <a href="#how" class="btn btn-outline-navy btn-lg">See How It Works</a>
+        </div>
+
+        <div class="hero-pills">
+          <span class="hero-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            For registered nonprofits
+          </span>
+          <span class="hero-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            In-kind, no cash required
+          </span>
+          <span class="hero-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            From idea to launch
+          </span>
+        </div>
+      </div>
+
+      <div class="col-lg-6 d-none d-lg-block">
+        <div class="mock-wrap">
+          <div class="mock">
+            <div class="mock-bar">
+              <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+              <span class="mock-title">impact-dashboard &middot; your nonprofit</span>
+            </div>
+            <div class="mock-body">
+              <div class="mock-stats">
+                <div class="mock-stat"><div class="n">3.2x</div><div class="l">Program capacity</div></div>
+                <div class="mock-stat"><div class="n">&minus;70%</div><div class="l">Admin time</div></div>
+              </div>
+              <div class="mock-chart">
+                <span style="height:40%"></span>
+                <span style="height:55%"></span>
+                <span style="height:48%"></span>
+                <span style="height:70%"></span>
+                <span style="height:62%"></span>
+                <span class="hi" style="height:92%"></span>
+              </div>
+            </div>
+          </div>
+          <div class="grant-badge">
+            <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L14.6 9.4 L24 12 L14.6 14.6 L12 24 L9.4 14.6 L0 12 L9.4 9.4 Z"/></svg>
+            <div>
+              <div class="amt">$50,000</div>
+              <div class="cap">Technology grant</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Logo strip / our work -->
+<section id="work" class="py-5 bg-white border-bottom" style="border-color: var(--color-border) !important;">
+  <div class="container py-4">
+    <p class="logo-strip-label text-center mb-4">Software we've built for mission-driven organizations</p>
+    <div class="row justify-content-center align-items-center g-4 g-md-5">
+      <!-- TODO: replace these wordmark lockups with real logo SVG/PNG art when available -->
+      <div class="col-auto">
+        <a class="logo-lockup" href="https://dailylectio.net" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/>
+            <path d="M20 18.5H6.5A2.5 2.5 0 0 0 4 21"/>
+            <line x1="12" y1="7" x2="12" y2="14"/><line x1="9" y1="9.5" x2="15" y2="9.5"/>
+          </svg>
+          <span class="name">Daily Lectio<small>dailylectio.net</small></span>
+        </a>
+      </div>
+      <div class="col-auto d-none d-md-block" aria-hidden="true">
+        <span style="color: var(--color-border); font-size: 1.5rem;">&middot;</span>
+      </div>
+      <div class="col-auto">
+        <a class="logo-lockup" href="#" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 21s-6-4.35-9-8.5C1.3 9.9 2.4 6 6 6c2 0 3.2 1.2 4 2.5C10.8 7.2 12 6 14 6"/>
+            <path d="M14 6c3.6 0 4.7 3.9 3 6.5"/>
+            <circle cx="17.5" cy="4.5" r="1.4"/><path d="M16.1 4.5h2.8M17.5 3.1v2.8"/>
+          </svg>
+          <span class="name">National Angels<small>foster care support</small></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="how" class="section">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <span class="eyebrow">How it works</span>
+        <h2 class="display-5 mb-3">A complete software engagement: strategy to launch.</h2>
+        <p class="lead mb-0">Off-the-shelf tools never quite fit, and custom software feels out of reach. We close that gap with a repeatable, transparent process, fully funded by the grant.</p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center px-2">
+          <div class="eyebrow mb-2">Phase 01</div>
+          <h3 class="h5 mb-2">Ideate</h3>
+          <p class="text-muted small mb-0">We clarify the problem worth solving and align on what to build, and why.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center px-2">
+          <div class="eyebrow mb-2">Phase 02</div>
+          <h3 class="h5 mb-2">Prototype</h3>
+          <p class="text-muted small mb-0">A working blueprint you can see and approve before a line of code is written.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center px-2">
+          <div class="eyebrow mb-2">Phase 03</div>
+          <h3 class="h5 mb-2">Build</h3>
+          <p class="text-muted small mb-0">Your blueprint becomes a real, deployed product your team and community can use.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center px-2">
+          <div class="eyebrow mb-2">Phase 04</div>
+          <h3 class="h5 mb-2">Operate</h3>
+          <p class="text-muted small mb-0">We handle the first months of maintenance and iteration so the tool earns its keep.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why a foundation -->
+<section class="section bg-cream">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="eyebrow">Why a foundation</span>
+        <h2 class="display-5 mb-4">Seasoned technologists, entirely in your corner.</h2>
+        <p class="lead mb-0">We have spent years building production software for organizations that cannot afford to get it wrong. The grant puts that experience entirely behind nonprofits, because the right tool, built the right way, multiplies what your team can do.</p>
+        <ul class="value-list">
+          <li>Years of building real, production software, not throwaway prototypes.</li>
+          <li>Nonprofit-first. We understand grant cycles, board reporting, and lean teams.</li>
+          <li>Built to last. Your tools should serve you for the next decade, not the next quarter.</li>
         </ul>
       </div>
-    </div>
-  </nav>
-
-  <section class="hero">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-          <span class="eyebrow">For nonprofits ready to scale impact</span>
-          <h1 class="display-3 mb-4">Your mission deserves software that works as hard as you do.</h1>
-          <p class="lead mb-5">You shouldn't have to choose between serving your community and keeping up with technology. We build the tools that let you do more of what matters, at the scale your mission demands.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="grant.html" class="btn btn-primary btn-lg">Apply for Grant</a>
-            <a href="#approach" class="btn btn-outline-dark btn-lg">See How We Work</a>
-          </div>
-        </div>
-        <div class="col-lg-5 d-none d-lg-block">
+      <div class="col-lg-6">
+        <div class="stat-card">
+          <p class="stat-eyebrow">What you receive</p>
+          <p class="stat-number">$50,000</p>
+          <p class="stat-label">in custom software services, awarded to one mission-driven nonprofit each cycle. From the first conversation to the last line of code, we build with you, at no cost to your organization.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section bg-cream">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-9">
-          <h2 class="display-5 mb-4">You know the impact you could have. Technology shouldn't be the thing standing in your way.</h2>
-          <p class="lead">Spreadsheets break under growth. Off-the-shelf tools never quite fit. Custom software feels out of reach: too expensive, too risky, too slow. Meanwhile, the people you serve are waiting.</p>
+<!-- Grant CTA -->
+<section class="section bg-navy">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <span class="eyebrow eyebrow-light">The Go Boldly Grant</span>
+        <h2 class="display-5 mb-4">$50,000 in custom software services. Built specifically for your mission.</h2>
+        <p class="lead text-light-muted mb-0">Each cycle, we award one nonprofit a full engagement: from idea to launch to ongoing operation. If your organization is ready for the next step, we would love to hear what you are working on.</p>
+      </div>
+      <div class="col-lg-5 text-lg-end">
+        <div class="d-flex flex-wrap gap-3 justify-content-lg-end">
+          <a href="{{ '/grant/' | relative_url }}" class="btn btn-gold btn-lg">Learn About the Grant</a>
+          <a href="{{ '/apply/' | relative_url }}" class="btn btn-outline-light-soft btn-lg">Apply Now</a>
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <span class="eyebrow">A guide who has been there</span>
-          <h2 class="display-5 mb-4">Seasoned technologists. Mission-driven outcomes.</h2>
-          <p class="lead mb-4">We have spent decades building software for organizations that can't afford to get it wrong. Now we're putting that experience entirely behind nonprofits, because the right tool, built the right way, multiplies what your team can do.</p>
-          <ul class="value-list">
-            <li><strong>20+ years</strong> of building production software for organizations with high stakes.</li>
-            <li><strong>Nonprofit-first</strong> approach. We understand grant cycles, board reporting, and lean teams.</li>
-            <li><strong>Built to last.</strong> Your tools should serve you for the next decade, not just the next quarter.</li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <div class="stat-card">
-            <p class="stat-eyebrow">What this looks like</p>
-            <p class="stat-number">3x</p>
-            <p class="stat-label">Average increase in program capacity reported by partner organizations within their first year of operating new tools we've built.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="approach" class="section bg-navy text-light">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-lg-9">
-          <span class="eyebrow eyebrow-light">A clear path forward</span>
-          <h2 class="display-5 mb-3">Four phases. One outcome: your team, equipped to do more.</h2>
-          <p class="lead text-light-muted mb-0">A repeatable, transparent process, designed so you always know exactly where we are and what comes next.</p>
-        </div>
-      </div>
-      <div class="row g-4 mt-3">
-        <div class="col-md-6 col-lg-3">
-          <div class="step-card">
-            <div class="step-number">PHASE 01</div>
-            <h3 class="h4 mb-3">Ideate</h3>
-            <p>We sit down with your team to clarify the problem worth solving. By the end, you have a sharp, shared understanding of what to build, and why it matters.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="step-card">
-            <div class="step-number">PHASE 02</div>
-            <h3 class="h4 mb-3">Prototype</h3>
-            <p>Like a blueprint for a house, we draft the full design before construction begins. You see exactly what's coming, and we align on every detail before a line of code is written.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="step-card">
-            <div class="step-number">PHASE 03</div>
-            <h3 class="h4 mb-3">Build</h3>
-            <p>Your blueprint becomes a working product, deployed to a live environment your staff and community can actually use. We sweat the details so your team can trust the tool.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="step-card">
-            <div class="step-number">PHASE 04</div>
-            <h3 class="h4 mb-3">Operate</h3>
-            <p>Software isn't done at launch. We handle the ongoing maintenance, oversight, and iteration that turns a tool into a long-term advantage for your mission.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="work" class="section">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-lg-9">
-          <span class="eyebrow">Recent work</span>
-          <h2 class="display-5 mb-3">Real organizations. Real impact, multiplied.</h2>
-          <p class="lead">Each engagement starts with a problem worth solving and ends with a tool that earns its place inside your organization.</p>
-        </div>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <article class="case-card">
-            <p class="case-tag">Food Security</p>
-            <h3>A volunteer platform that scaled with demand.</h3>
-            <p>Replaced fragile spreadsheets with a coordination tool that triples volunteer retention and frees staff from weekly scheduling chaos.</p>
-            <p class="case-result">3x volunteer retention</p>
-          </article>
-        </div>
-        <div class="col-md-4">
-          <article class="case-card">
-            <p class="case-tag">Youth Mentorship</p>
-            <h3>A matching engine that grew the program 4x.</h3>
-            <p>Custom matching software helped a regional mentorship nonprofit expand from 200 to 800 active pairings, with the same staffing footprint.</p>
-            <p class="case-result">4x active pairings</p>
-          </article>
-        </div>
-        <div class="col-md-4">
-          <article class="case-card">
-            <p class="case-tag">Housing Assistance</p>
-            <h3>A case management tool that cut intake time by 70%.</h3>
-            <p>One unified workspace replaced six disconnected spreadsheets. Caseworkers spend less time on data entry, more time with the people they serve.</p>
-            <p class="case-result">70% faster intake</p>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-cta">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-          <span class="eyebrow eyebrow-light">The Go Boldly Grant</span>
-          <h2 class="display-5 mb-4">$50,000 in custom software services. Built specifically for your mission.</h2>
-          <p class="lead text-light-muted mb-0">Each year, we award one nonprofit a full engagement, from idea to launch to ongoing operation. If your organization is ready for the next step, we'd love to hear what you're working on.</p>
-        </div>
-        <div class="col-lg-5 text-lg-end">
-          <div class="d-flex flex-wrap gap-3 justify-content-lg-end">
-            <a href="grant.html" class="btn btn-accent btn-lg">Learn About the Grant</a>
-            <a href="grant.html#apply" class="btn btn-outline-light btn-lg">Apply Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <p class="mb-1 fw-semibold" style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--color-navy);">Go Boldly Foundation</p>
-          <p class="small mb-0" style="color: var(--color-muted);">Technology built for the missions that matter.</p>
-        </div>
-        <div class="col-md-6 text-md-end mt-4 mt-md-0">
-          <a href="grant.html" class="footer-link">Grant Program</a>
-          <a href="mailto:morgan@goboldlyforward.com" class="footer-link">Contact</a>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col text-center small" style="color: var(--color-muted);">
-          &copy; 2026 Go Boldly Foundation. All rights reserved.<br>
-          Registered 501(c)(3). EIN: 41-4777381 • All donations are tax deductible
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  </div>
+</section>

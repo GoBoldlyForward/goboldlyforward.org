@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+  {%- include navbar.html -%}
+
+  {{ content }}
+
+  {%- include footer.html -%}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Apply form: client-side confirmation. When a real endpoint is wired
+    // (set data-live="true" + a working action), let the POST go through.
+    (function () {
+      var gf = document.getElementById('grantForm');
+      if (!gf) return;
+      gf.addEventListener('submit', function (e) {
+        if (gf.getAttribute('data-live') === 'true') return;
+        e.preventDefault();
+        var ok = document.getElementById('formSuccess');
+        if (ok) {
+          ok.classList.remove('d-none');
+          ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

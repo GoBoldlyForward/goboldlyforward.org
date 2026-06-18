@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["NGO", "Organization"],
+      "@id": "{{ site.url }}/#organization",
+      "name": "Go Boldly Foundation",
+      "alternateName": "goboldlyforward.org",
+      "url": "{{ site.url }}/",
+      "logo": "{{ site.url }}/assets/img/og-image.jpg",
+      "description": {{ site.description | strip_newlines | jsonify }},
+      "email": "morgan@goboldlyforward.com",
+      "nonprofitStatus": "Nonprofit501c3",
+      "sameAs": ["https://github.com/GoBoldlyForward"]
+    },
+    {
+      "@type": "MonetaryGrant",
+      "name": "The Go Boldly Grant",
+      "description": "$50,000 in custom software development services, awarded as an in-kind grant to one mission-driven nonprofit per cycle.",
+      "amount": { "@type": "MonetaryAmount", "currency": "USD", "value": "50000" },
+      "funder": { "@id": "{{ site.url }}/#organization" }
+    }
+  ]
+}
+</script>

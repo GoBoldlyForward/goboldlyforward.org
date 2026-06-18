@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">
+      <!-- North-star brand mark (guiding star = "go boldly") -->
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 0 L14.6 9.4 L24 12 L14.6 14.6 L12 24 L9.4 14.6 L0 12 L9.4 9.4 Z"/>
+      </svg>
+      <span>goboldlyforward<span class="brand-sub">.org</span></span>
+    </a>
+
+    <a class="btn btn-gold btn-sm d-lg-none" href="{{ '/apply/' | relative_url }}">Apply</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="{{ '/#how' | relative_url }}">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ '/#work' | relative_url }}">Our Work</a></li>
+        <li class="nav-item"><a class="nav-link{% if page.nav_active == 'grant' %} active{% endif %}" href="{{ '/grant/' | relative_url }}">The Grant</a></li>
+        <li class="nav-item"><a class="btn btn-outline-navy ms-lg-3{% if page.nav_active == 'donate' %} active{% endif %}" href="{{ '/donate/' | relative_url }}">Donate</a></li>
+        <li class="nav-item"><a class="btn btn-gold ms-lg-2" href="{{ '/apply/' | relative_url }}">Apply for the Grant</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

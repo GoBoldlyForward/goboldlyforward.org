@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#1B2A41"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- watermark star -->
+  <g transform="translate(815 150)" opacity="0.10">
+    <g transform="scale(14)">
+      <path d="M12 0 L14.6 9.4 L24 12 L14.6 14.6 L12 24 L9.4 14.6 L0 12 L9.4 9.4 Z" fill="#D69E2E"/>
+    </g>
+  </g>
+
+  <!-- brand lockup -->
+  <g transform="translate(80 70)">
+    <g transform="scale(1.5)">
+      <path d="M12 0 L14.6 9.4 L24 12 L14.6 14.6 L12 24 L9.4 14.6 L0 12 L9.4 9.4 Z" fill="#D69E2E"/>
+    </g>
+    <text x="52" y="28" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#ffffff">goboldlyforward<tspan fill="#9aa6b6">.org</tspan></text>
+  </g>
+
+  <!-- headline -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="74" fill="#ffffff">
+    <tspan x="80" y="290">Maximize your impact</tspan>
+    <tspan x="80" y="380">with <tspan fill="#D69E2E">cutting-edge technology</tspan>,</tspan>
+    <tspan x="80" y="470">fully funded.</tspan>
+  </text>
+
+  <!-- grant badge -->
+  <g transform="translate(80 530)">
+    <rect width="560" height="58" rx="29" fill="#D69E2E"/>
+    <text x="32" y="38" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1.5" fill="#142036">$50,000 IN-KIND TECHNOLOGY GRANT</text>
+  </g>
+</svg>

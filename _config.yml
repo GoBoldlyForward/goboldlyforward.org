@@ -1,0 +1,43 @@
+title: Go Boldly Foundation
+tagline: Technology Built for Your Mission
+description: >-
+  Go Boldly Foundation helps mission-driven nonprofits maximize their impact
+  with cutting-edge software, funded through our $50,000 technology grant.
+url: "https://www.goboldlyforward.org"
+baseurl: ""
+lang: en
+
+author:
+  name: Go Boldly Foundation
+  email: morgan@goboldlyforward.com
+
+# Used by jekyll-seo-tag for the Organization logo + Twitter card type
+logo: /assets/img/og-image.jpg
+twitter:
+  card: summary_large_image
+social:
+  name: Go Boldly Foundation
+  links:
+    - https://github.com/GoBoldlyForward
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Default Open Graph image for every page (jekyll-seo-tag absolutizes it)
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og-image.jpg
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - README.md
+  - .bundle/
+  - node_modules/
