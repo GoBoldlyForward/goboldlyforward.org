@@ -196,6 +196,9 @@ p { line-height: 1.6; }
 
 /* ---------- Logo strip ---------- */
 .logo-strip-label { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; color: var(--color-muted); }
+.client-logo { display: inline-block; opacity: 0.88; transition: opacity 0.2s ease, transform 0.2s ease; }
+.client-logo:hover { opacity: 1; transform: translateY(-2px); }
+.client-logo img { display: block; width: auto; }
 .logo-lockup {
   display: inline-flex; align-items: center; gap: 0.65rem;
   color: var(--color-navy);
