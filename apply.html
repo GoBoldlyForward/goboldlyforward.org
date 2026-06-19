@@ -27,18 +27,22 @@ nav_active: apply
                 <div class="col-12">
                   <label for="orgName" class="form-label">Organization name</label>
                   <input type="text" class="form-control form-control-lg" id="orgName" name="organization" required>
-                </div>
-                <div class="col-md-6">
-                  <label for="ein" class="form-label">EIN / Tax ID</label>
-                  <input type="text" class="form-control form-control-lg" id="ein" name="ein" required>
+                  <div class="invalid-feedback">Please enter your organization's name.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="website" class="form-label">Website</label>
                   <input type="url" class="form-control form-control-lg" id="website" name="website" placeholder="https://" required>
+                  <div class="invalid-feedback">Please enter a valid URL, including https://.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="orgEmail" class="form-label">Organization email</label>
+                  <input type="email" class="form-control form-control-lg" id="orgEmail" name="email" placeholder="hello@yourorg.org" required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
                 <div class="col-12">
                   <label for="mission" class="form-label">Your mission, in your own words</label>
                   <textarea class="form-control" id="mission" name="mission" rows="3" required></textarea>
+                  <div class="invalid-feedback">Please tell us about your mission.</div>
                 </div>
               </div>
             </fieldset>
@@ -46,21 +50,48 @@ nav_active: apply
             <fieldset class="mb-4">
               <legend>Primary contact</legend>
               <div class="row g-3">
-                <div class="col-md-6">
+                <div class="col-md-5">
                   <label for="contactName" class="form-label">Full name</label>
                   <input type="text" class="form-control form-control-lg" id="contactName" name="contact_name" required>
+                  <div class="invalid-feedback">Please enter the contact's name.</div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <label for="contactRole" class="form-label">Role / title</label>
                   <input type="text" class="form-control form-control-lg" id="contactRole" name="contact_role" required>
+                  <div class="invalid-feedback">Please enter their role.</div>
                 </div>
-                <div class="col-md-6">
-                  <label for="contactEmail" class="form-label">Email</label>
-                  <input type="email" class="form-control form-control-lg" id="contactEmail" name="email" required>
-                </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <label for="contactPhone" class="form-label">Phone <span class="form-note">(optional)</span></label>
                   <input type="tel" class="form-control form-control-lg" id="contactPhone" name="phone">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="mb-4">
+              <legend>Your team</legend>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="techStaff" class="form-label">Technical team members on staff?</label>
+                  <select class="form-select form-select-lg" id="techStaff" name="technical_staff" required>
+                    <option value="" selected disabled>Choose one&hellip;</option>
+                    <option>None</option>
+                    <option>1&ndash;2 developers or engineers</option>
+                    <option>3 or more</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose an option.</div>
+                  <div class="form-text">Developers, software engineers, or similar.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="weeklyHours" class="form-label">Hours per week your team could commit</label>
+                  <select class="form-select form-select-lg" id="weeklyHours" name="weekly_hours" required>
+                    <option value="" selected disabled>Choose one&hellip;</option>
+                    <option>None</option>
+                    <option>2&ndash;5 hours</option>
+                    <option>5&ndash;10 hours</option>
+                    <option>10+ hours</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose an option.</div>
+                  <div class="form-text">For collaboration during the build.</div>
                 </div>
               </div>
             </fieldset>
@@ -71,24 +102,30 @@ nav_active: apply
                 <div class="col-12">
                   <label for="opportunity" class="form-label">What challenge or opportunity could the right software unlock?</label>
                   <textarea class="form-control" id="opportunity" name="opportunity" rows="4" required></textarea>
+                  <div class="invalid-feedback">Please describe the opportunity.</div>
                 </div>
                 <div class="col-md-6">
-                  <label for="served" class="form-label">People your program serves today</label>
-                  <input type="text" class="form-control form-control-lg" id="served" name="people_served" placeholder="e.g. ~1,200 / year" required>
+                  <label for="served" class="form-label">People your program serves per year</label>
+                  <input type="number" min="0" inputmode="numeric" class="form-control form-control-lg" id="served" name="people_served_per_year" placeholder="e.g. 1200" required>
+                  <div class="invalid-feedback">Please enter an annual number.</div>
+                  <div class="form-text">Annualized total.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="timeline" class="form-label">Ideal start</label>
-                  <select class="form-select form-select-lg" id="timeline" name="ideal_start">
+                  <select class="form-select form-select-lg" id="timeline" name="ideal_start" required>
+                    <option value="" selected disabled>Choose one&hellip;</option>
                     <option>As soon as possible</option>
                     <option>Within 3 months</option>
                     <option>Within 6 months</option>
                     <option>Just exploring</option>
                   </select>
+                  <div class="invalid-feedback">Please choose a timeframe.</div>
                 </div>
                 <div class="col-12 mt-2">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="eligible" name="eligibility_confirmed" value="yes" required>
-                    <label class="form-check-label" for="eligible">We're a registered 501(c)(3) in good standing and can commit 4-6 hours per week during the build.</label>
+                    <label class="form-check-label" for="eligible">We're a registered 501(c)(3) (or international equivalent) in good standing.</label>
+                    <div class="invalid-feedback">Please confirm your eligibility.</div>
                   </div>
                 </div>
               </div>

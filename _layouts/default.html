@@ -12,24 +12,40 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Apply form: submit to Formspree over AJAX so the visitor stays on-page
-    // and sees our own success message (Formspree returns JSON when asked).
+    // Apply form: clear inline validation + Formspree AJAX (stays on-page, shows our message).
     (function () {
       var gf = document.getElementById('grantForm');
       if (!gf) return;
       var ok = document.getElementById('formSuccess');
       var err = document.getElementById('formError');
       var btn = gf.querySelector('button[type="submit"]');
+      function fields() { return gf.querySelectorAll('input:not([type=hidden]), select, textarea'); }
       function fail(msg) {
         if (!err) return;
         err.textContent = msg + ' You can also email morgan@goboldlyforward.com.';
         err.classList.remove('d-none');
         err.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
+      // Clear a field's error the moment it becomes valid.
+      function clear(e) {
+        var t = e.target;
+        if (t.classList && t.classList.contains('is-invalid') && t.checkValidity()) t.classList.remove('is-invalid');
+      }
+      gf.addEventListener('input', clear);
+      gf.addEventListener('change', clear);
+
       gf.addEventListener('submit', function (e) {
         e.preventDefault();
         if (err) err.classList.add('d-none');
-        if (!gf.checkValidity()) { gf.reportValidity(); return; }
+        if (!gf.checkValidity()) {
+          var first = null;
+          fields().forEach(function (c) {
+            if (c.checkValidity()) { c.classList.remove('is-invalid'); }
+            else { c.classList.add('is-invalid'); if (!first) first = c; }
+          });
+          if (first) { first.focus({ preventScroll: true }); first.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+          return;
+        }
         var label = btn ? btn.textContent : '';
         if (btn) { btn.disabled = true; btn.textContent = 'Submitting…'; }
         fetch(gf.action, {
@@ -39,6 +55,7 @@
         }).then(function (res) {
           if (res.ok) {
             gf.reset();
+            fields().forEach(function (c) { c.classList.remove('is-invalid'); });
             if (ok) { ok.classList.remove('d-none'); ok.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
           } else {
             return res.json().then(function (d) {
